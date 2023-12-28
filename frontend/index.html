@@ -104,9 +104,16 @@
   };
   var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
   var chatbotUiConfig = {
-          ui: {
-            parentOrigin: 'https://main.d3159zavgu3rre.amplifyapp.com'
-          }
+         ui: {
+                  // origin of the parent site where you are including the chatbot UI
+                  // set to window.location.origin since hosting on same site
+                  parentOrigin: window.location.origin,
+                },
+                iframe: {
+                  // origin hosting the HTML file that will be embedded in the iframe
+                  // set to window.location.origin since hosting on same site
+                  iframeOrigin: window.location.origin,
+                }
         };
   loader.load(chatbotUiConfig)
     .catch(function (error) { console.error(error); });
