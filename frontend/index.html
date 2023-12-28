@@ -104,14 +104,9 @@
   };
   var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
   var chatbotUiConfig = {
-          /* Example of setting session attributes on parent page
-          lex: {
-            sessionAttributes: {
-              userAgent: navigator.userAgent,
-              QNAClientFilter: ''
-            }
+          ui: {
+            parentOrigin: 'https://main.d3159zavgu3rre.amplifyapp.com/index.html'
           }
-          */
         };
   loader.load(chatbotUiConfig)
     .catch(function (error) { console.error(error); });
