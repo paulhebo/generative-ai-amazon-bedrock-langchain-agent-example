@@ -104,9 +104,6 @@
   };
   var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
   var chatbotUiConfig = {
-         ui: {
-               parentOrigin: "https://main.d3159zavgu3rre.amplifyapp.com",
-             }
         };
   loader.load(chatbotUiConfig)
     .catch(function (error) { console.error(error); });
